@@ -1,0 +1,221 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* end universal styles */
+
+/* text theme */
+.text-theme {
+  background: linear-gradient(to right, rgb(18,194,233), rgb(246,79,89), rgb(246,79,89));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+/* end text theme */
+
+.main-header {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* nav link styles */
+.nav-link, .say-hi-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative; 
+}
+.view-project-link {
+  position: relative;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  height: 2px;
+  width: 0;
+  transition: ease all 0.35s; 
+}
+
+.nav-link.activeLink:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  background-image: linear-gradient(to left, rgb(18,194,233), rgb(196,113,237), rgb(246,79,89));
+}
+
+.nav-link-span:after,
+.nav-link-span:before,
+.say-hi-link:after,
+.say-hi-link:before,
+.view-project-link:after,
+.view-project-link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.35s ease;
+}
+
+.nav-link-span:after,
+.say-hi-link:after,
+.view-project-link:after {
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.nav-link-span:before,
+.say-hi-link:before,
+.view-project-link:before {
+  width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.nav-link-span:hover::before,
+.nav-link-span:hover::after,
+.say-hi-link:hover::before,
+.say-hi-link:hover::after,
+.view-project-link:hover::before,
+.view-project-link:hover::after {
+  width: 100%;
+  height: 100%;
+  border-image: radial-gradient(rgb(246,79,89), rgb(18,194,233), rgb(246,79,89)) 1;
+}
+
+.say-hi-link:hover {
+  padding: 10px 0;
+}
+/* end nav link styles */
+
+/* section styles */
+.section {
+  padding: 50px 0
+}
+
+.border-top {
+  position: relative; 
+}
+
+.border-top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 1px;
+  left: 0;
+  right: 0;
+  max-width: 1250px;
+  margin: 0 auto;
+  background: #292929;
+  opacity: 0.1; 
+}
+/* end section styles */
+
+/* top section styles */
+.square {
+  border-image: linear-gradient(to right, rgba(18,194,233,.2), rgba(246,79,89,.2) 80%, rgba(246,79,89,.2))1;
+}
+/* end top section styles */
+
+/* skills bar styles */
+.skills-bar-container {
+  position: relative;
+}
+
+.skills-bar-container::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius:10px;
+  border:2px solid transparent;
+  background:radial-gradient(rgb(246,79,89), rgb(18,194,233), rgb(246,79,89)) border-box;
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) padding-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out; 
+  mask-composite: exclude;
+  mask: 'none';
+  position: 'relative';
+}
+/* end skills bar styles */
+
+/* animations */
+/* .fade-out-page{
+  animation: fade-out 2s;
+} */
+
+.fade-out {
+  animation: fade-out 2s;
+}
+
+.fade-in {
+  animation: fade-in 600s infinite;
+  /* animation-delay: 3s; */
+}
+
+.blink {
+  animation: blink 2s linear infinite;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  .5% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* end animations */
