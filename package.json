@@ -1,5 +1,5 @@
 {
-  "homepage": "https://xavy-romeo.netlify.app/",
+  "homepage": "https://xavy-romeo.github.io/my-portfolio",
   "name": "xavy-romeo-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
